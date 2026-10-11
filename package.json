@@ -3,6 +3,7 @@
   "name": "@asd14/semantic-release-config",
   "version": "1.0.0",
   "description": "ASD14's reusable semantic-release config",
+  "license": "MIT",
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
