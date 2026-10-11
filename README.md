@@ -10,9 +10,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration Details](#configuration-details)
-  - [Release steps](#release-steps)
   - [Release notes](#release-notes)
-- [Limits](#limits)
 - [License](#license)
 
 <!-- vim-markdown-toc -->
@@ -37,9 +35,11 @@ In your `.releaserc`:
 }
 ```
 
-## Configuration Details
+> [!IMPORTANT]  
+> semantic-release does not merge lists. If you set `plugins` in your
+> `.releaserc`, you replace all five plugins of this config.
 
-### Release steps
+## Configuration Details
 
 | Step | Plugin                                      | Job                                                                                                                     |
 | ---- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -51,7 +51,11 @@ In your `.releaserc`:
 
 ### Release notes
 
-The notes show one section for each of these commit types, in this order:
+The notes show one section for each of these commit types,
+[conventional-changelog-conventionalcommits], in this order:
+
+[conventional-changelog-conventionalcommits]:
+  https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-conventionalcommits
 
 | Type       | Section                  |
 | ---------- | ------------------------ |
@@ -65,20 +69,6 @@ The notes show one section for each of these commit types, in this order:
 | `refactor` | Refactors                |
 | `ci`       | CI                       |
 | `chore`    | - not included -         |
-
-> [!NOTE]  
-> [conventional-changelog-conventionalcommits] plugin is used for the types
-> above.
-
-[conventional-changelog-conventionalcommits]:
-  https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-conventionalcommits
-
-## Limits
-
-This config takes no options.
-
-semantic-release does not merge lists. If you set `plugins` in your
-`.releaserc`, you replace all five plugins of this config.
 
 ## License
 
