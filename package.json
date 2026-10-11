@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@asd14/semantic-release-config",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "ASD14's reusable semantic-release config",
   "sideEffects": false,
   "publishConfig": {
