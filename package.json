@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@asd14/semantic-release-config",
+  "version": "1.0.0",
+  "description": "ASD14's reusable semantic-release config",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asd-xiv/semantic-release-config.git"
+  },
+  "files": [
+    "src",
+    "!src/**/*.test.js"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "----UTIL": "",
+    "prepare": "git config --local core.hooksPath .githook",
+    "---BUILD": "",
+    "prerelease:local": "[ -f package-lock.json ] || { echo 'No package-lock.json found, run `npm install` first'; exit 1; }",
+    "release:local": "semantic-release --no-ci",
+    "----CODE-ANALYSIS": "",
+    "test": "node --test 'src/**/*.test.js'"
+  },
+  "dependencies": {
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^11.0.1",
+    "@semantic-release/github": "^12.0.10",
+    "@semantic-release/npm": "^13.2.0",
+    "@semantic-release/release-notes-generator": "^14.1.1",
+    "conventional-changelog-conventionalcommits": "^9.3.1"
+  },
+  "peerDependencies": {
+    "semantic-release": "^25"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.3",
+    "@commitlint/config-conventional": "^21.2.3",
+    "semantic-release": "^25.0.9"
+  }
+}

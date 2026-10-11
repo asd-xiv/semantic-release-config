@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json.schemastore.org/semantic-release.json",
+  "branches": ["main"],
+  "extends": "./src/index.js"
+}
