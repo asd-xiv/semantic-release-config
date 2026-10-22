@@ -29,6 +29,10 @@ jobs:
       - name: Install dependencies
         run: npm clean-install
 
+      # The tests load the config, the way semantic-release does
+      - name: Run tests
+        run: npm test
+
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
 
