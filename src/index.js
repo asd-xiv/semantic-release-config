@@ -51,7 +51,10 @@ const VERIFY_RELEASE_SCRIPT = fileURLToPath(
  */
 const config = {
   plugins: [
-    ["@semantic-release/commit-analyzer", { parserOpts: parser }],
+    [
+      "@semantic-release/commit-analyzer",
+      { parserOpts: conventionalCommits.parser },
+    ],
     [
       "@semantic-release/release-notes-generator",
       {
