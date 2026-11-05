@@ -28,7 +28,7 @@
     "prerelease:local": "[ -f package-lock.json ] || { echo 'No package-lock.json found, run `npm install` first'; exit 1; }",
     "release:local": "semantic-release --no-ci",
     "----CODE-ANALYSIS": "",
-    "test": "node --test 'src/**/*.test.js'"
+    "unit-test": "node --test 'src/**/*.test.js'"
   },
   "dependencies": {
     "@semantic-release/commit-analyzer": "^13.0.1",

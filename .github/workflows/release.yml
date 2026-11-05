@@ -31,7 +31,7 @@ jobs:
 
       # The tests load the config, the way semantic-release does
       - name: Run tests
-        run: npm test
+        run: npm run unit-test
 
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
